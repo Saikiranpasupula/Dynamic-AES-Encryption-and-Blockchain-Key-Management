@@ -6,10 +6,6 @@
 
 # 
 
-# \---
-
-# 
-
 # \## 📌 Overview
 
 # 
@@ -27,10 +23,6 @@
 # \- 👥 Role-based access control (Admin, Manager, Client)  
 
 # \- ✅ File approval workflow before access is granted  
-
-# 
-
-# \---
 
 # 
 
@@ -56,10 +48,6 @@
 
 # 
 
-# \---
-
-# 
-
 # \## 🛡️ Security Properties
 
 # 
@@ -75,10 +63,6 @@
 # | Authentication  | Login \& Role-Based Control   |
 
 # | Key Management  | Dynamic Key Generation       |
-
-# 
-
-# \---
 
 # 
 
@@ -107,10 +91,6 @@ database/
 
 
 
-\---
-
-
-
 \## 🧰 Technologies Used
 
 
@@ -127,10 +107,6 @@ database/
 
 
 
-\---
-
-
-
 \## 🚀 Future Work
 
 
@@ -141,11 +117,7 @@ database/
 
 \- Cloud deployment with end-to-end encryption  
 
-\- Secure Multi-Party Computation (SMPC) support  
-
-
-
-\---
+\- Secure Multi-Party Computation (SMPC) support 
 
 
 
