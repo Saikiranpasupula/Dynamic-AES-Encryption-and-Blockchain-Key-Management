@@ -1,4 +1,4 @@
-# \# 🔐 Secure File Management System
+# 🔐 Secure File Management System
 
 # 
 
@@ -6,7 +6,7 @@
 
 # 
 
-# \## 📌 Overview
+# 📌 Overview
 
 # 
 
@@ -14,19 +14,19 @@
 
 # 
 
-# \- 🔒 Data confidentiality through AES encryption  
+# &#x20;🔒 Data confidentiality through AES encryption  
 
-# \- 🧾 Integrity verification using SHA-256 hashing  
+# &#x20;🧾 Integrity verification using SHA-256 hashing  
 
-# \- 🔑 Dynamic encryption key generation per file  
+# &#x20;🔑 Dynamic encryption key generation per file  
 
-# \- 👥 Role-based access control (Admin, Manager, Client)  
+# &#x20;👥 Role-based access control (Admin, Manager, Client)  
 
-# \- ✅ File approval workflow before access is granted  
+# &#x20;✅ File approval workflow before access is granted  
 
 # 
 
-# \## ⚙️ How It Works
+# ⚙️ How It Works
 
 # 
 
@@ -48,7 +48,7 @@
 
 # 
 
-# \## 🛡️ Security Properties
+# 🛡️ Security Properties
 
 # 
 
@@ -66,7 +66,7 @@
 
 # 
 
-# \## 🗂️ Project Structure
+# 🗂️ Project Structure
 
 src/
 
@@ -91,7 +91,7 @@ database/
 
 
 
-\## 🧰 Technologies Used
+🧰 Technologies Used
 
 
 
@@ -107,7 +107,7 @@ database/
 
 
 
-\## 🚀 Future Work
+🚀 Future Work
 
 
 
@@ -121,7 +121,7 @@ database/
 
 
 
-\## 📚 Citation
+📚 Citation
 
 
 
