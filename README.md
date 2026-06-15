@@ -1,18 +1,10 @@
-# \# Secure File Management System using AES Encryption and SHA-256 Integrity Verification
+# \## Secure File Management System — AES Encryption \& SHA-256 Integrity Verification
 
 # 
 
-# \## Overview
+# > A Java-based secure file management system that protects sensitive data using
 
-# 
-
-# A secure cloud-based file management system that protects sensitive data using
-
-# cryptographic techniques. The system ensures data confidentiality through AES
-
-# encryption and verifies file integrity using SHA-256 hashing, with role-based
-
-# access control for secure multi-user environments.
+# > AES encryption, SHA-256 integrity verification, and role-based access control.
 
 # 
 
@@ -20,25 +12,13 @@
 
 # 
 
-# \## Problem Statement
+# \### Problem Statement
 
-# 
+# Uploading sensitive files to shared environments creates risks of unauthorized access
 
-# Uploading sensitive files to shared or cloud environments introduces privacy
+# and data tampering. This system addresses data confidentiality, integrity verification,
 
-# risks including unauthorized access, data tampering, and key exposure.
-
-# 
-
-# This project addresses:
-
-# \- Data confidentiality during file storage and transfer
-
-# \- Integrity verification to detect unauthorized modifications
-
-# \- Secure key management using dynamically generated encryption keys
-
-# \- Role-based access control for Admin, Manager, and Client users
+# and secure key management for multi-user environments.
 
 # 
 
@@ -46,85 +26,29 @@
 
 # 
 
-\## System Architecture
-Client
-===
+# \### System Architecture
+
+# Client Login → File Upload → AES Key Generation → AES Encryption
 
 # 
 
-# |
+# ↓
 
 # 
 
-# |-- Registration / Login (Authentication)
+# SHA-256 Hash Generation
 
 # 
 
-# |
+# ↓
 
 # 
 
-# v
+# Database Storage
 
 # 
 
-# File Upload Module
-
-# 
-
-# |
-
-# 
-
-# v
-
-# 
-
-# AES Key Generation (Dynamic Key per file)
-
-# 
-
-# |
-
-# 
-
-# v
-
-# 
-
-# AES Encryption (File content encrypted)
-
-# 
-
-# |
-
-# 
-
-# v
-
-# 
-
-# SHA-256 Hash Generation (Integrity fingerprint)
-
-# 
-
-# |
-
-# 
-
-# v
-
-# 
-
-# Secure Database Storage
-
-# 
-
-# |
-
-# 
-
-# v
+# ↓
 
 # 
 
@@ -132,11 +56,7 @@ Client
 
 # 
 
-# |
-
-# 
-
-# v
+# ↓
 
 # 
 
@@ -148,17 +68,15 @@ Client
 
 # 
 
-# \## Features
+# \### Features
 
-# 
+# \- Dynamic AES key generation per file
 
-# \- Dynamic AES key generation for each file upload
-
-# \- AES symmetric encryption ensuring data confidentiality
+# \- AES symmetric encryption for data confidentiality
 
 # \- SHA-256 hash-based integrity verification
 
-# \- Role-based access: Admin, Manager, Client
+# \- Role-based access control — Admin, Manager, Client
 
 # \- Secure user registration and authentication
 
@@ -172,41 +90,21 @@ Client
 
 # 
 
-# \## Security Goals
+# \### Security Properties
 
 # 
 
-# | Property       | Mechanism              |
+# | Property | Mechanism |
 
-# |----------------|------------------------|
+# |---|---|
 
-# | Confidentiality | AES Encryption        |
+# | Confidentiality | AES Encryption |
 
-# | Integrity       | SHA-256 Hashing       |
+# | Integrity | SHA-256 Hashing |
 
-# | Authentication  | Login + Role Control  |
+# | Authentication | Login + Role Control |
 
-# | Key Security    | Dynamic Key Generation|
-
-# 
-
-# \---
-
-# 
-
-# \## Technologies Used
-
-# 
-
-# \- \*\*Language:\*\* Java
-
-# \- \*\*Encryption:\*\* AES (Advanced Encryption Standard)
-
-# \- \*\*Integrity:\*\* SHA-256 Cryptographic Hashing
-
-# \- \*\*Database:\*\* MySQL
-
-# \- \*\*Key Management:\*\* Dynamic Random Key Generation
+# | Key Security | Dynamic Key Generation |
 
 # 
 
@@ -214,39 +112,45 @@ Client
 
 # 
 
-# \## Project Structure
+# \### Technologies
+
+# `Java` `AES` `SHA-256` `MySQL` `Cryptography` `Role-Based Access Control`
+
+# 
+
+# \---
+
+# 
+
+# \### Project Structure
 
 # src/
 
 # 
 
-# ├── com/admin/          → Admin module
+# ├── com/client/      → Login, Registration, File Search
 
 # 
 
-# ├── com/client/         → Client registration, login, file search
+# ├── com/manager/     → File Upload, Approval Workflow
 
 # 
 
-# ├── com/manager/        → File upload and approval
+# ├── com/file/        → AES Key Generation, SHA-256 Hashing
 
 # 
 
-# ├── com/file/           → AES key generation, SHA-256 hashing
+# ├── com/database/    → Database Connection
 
 # 
 
-# ├── com/database/       → Database connection
-
-# 
-
-# └── com/bean/           → Utility classes
+# └── com/admin/       → Admin Module
 
 # database/
 
 # 
 
-# └── VC12.sql            → Database schema
+# └── VC12.sql         → Database Schema
 
 # 
 
@@ -254,69 +158,13 @@ Client
 
 # 
 
-# \## How It Works
+# \### Future Scope
 
-# 
+# \- Homomorphic Encryption for computation over encrypted data
 
-# 1\. Client registers and logs in securely
+# \- Blockchain-based tamper-proof key storage
 
-# 2\. Client uploads a file
-
-# 3\. System generates a dynamic AES key for that file
-
-# 4\. File is encrypted using AES before storage
-
-# 5\. SHA-256 hash is generated to record file fingerprint
-
-# 6\. Manager reviews and approves the file
-
-# 7\. Authorized client accesses and decrypts the file
-
-# 8\. Hash is re-verified to confirm file integrity
-
-# 
-
-# \---
-
-# 
-
-# \## Future Improvements
-
-# 
-
-# \- Integration of Homomorphic Encryption for computation over encrypted data
-
-# \- Blockchain-based key storage for tamper-proof key management
-
-# \- Cloud deployment with end-to-end encrypted storage
+# \- Cloud deployment with end-to-end encryption
 
 # \- Differential privacy for access pattern protection
-
-# \- Secure Multi-Party Computation for collaborative file processing
-
-# 
-
-# \---
-
-# 
-
-# \## Relevance to Privacy-Preserving Computing
-
-# 
-
-# This project demonstrates foundational concepts in:
-
-# \- Cryptographic data protection
-
-# \- Secure key lifecycle management
-
-# \- Integrity verification protocols
-
-# \- Privacy-aware system design
-
-# 
-
-# These are stepping stones toward advanced privacy-preserving techniques
-
-# including Homomorphic Encryption and Secure Computation.
 
