@@ -1,143 +1,157 @@
-# \# Secure File Management System
+# \# 🔐 Secure File Management System
 
 # 
 
-# A Java-based secure file management system that protects sensitive data
-
-# using AES encryption, SHA-256 integrity verification, and role-based access control.
+# A Java-based secure file management system that protects sensitive data using AES encryption, SHA-256 integrity verification, and role-based access control.
 
 # 
 
-# \## Overview
+# \---
 
 # 
 
-# Uploading sensitive files to shared environments creates risks of unauthorized
-
-# access and data tampering. This system provides:
+# \## 📌 Overview
 
 # 
 
-# \- Data confidentiality through AES encryption
-
-# \- Integrity verification using SHA-256 hashing
-
-# \- Dynamic encryption key generation per file
-
-# \- Role-based access for Admin, Manager, and Client users
-
-# \- File approval workflow before access is granted
+# Uploading sensitive files to shared environments creates risks of unauthorized access and data tampering. This system solves that by providing:
 
 # 
 
-# \## How It Works
+# \- 🔒 Data confidentiality through AES encryption  
+
+# \- 🧾 Integrity verification using SHA-256 hashing  
+
+# \- 🔑 Dynamic encryption key generation per file  
+
+# \- 👥 Role-based access control (Admin, Manager, Client)  
+
+# \- ✅ File approval workflow before access is granted  
 
 # 
 
-# 1\. Client registers and logs in securely
-
-# 2\. Client uploads a file to the system
-
-# 3\. System generates a unique AES key for that file
-
-# 4\. File content is encrypted using AES before storage
-
-# 5\. SHA-256 hash is generated as a file integrity fingerprint
-
-# 6\. Manager reviews and approves the file
-
-# 7\. Authorized client accesses and decrypts the file
-
-# 8\. Hash is re-verified to confirm no tampering occurred
+# \---
 
 # 
 
-# \## Security Properties
+# \## ⚙️ How It Works
 
 # 
 
-# | Property | Mechanism |
+# 1\. Client registers and logs in securely  
 
-# |----------|-----------|
+# 2\. Client uploads a file to the system  
 
-# | Confidentiality | AES Encryption |
+# 3\. System generates a unique AES key for each file  
 
-# | Integrity | SHA-256 Hashing |
+# 4\. File is encrypted using AES before storage  
 
-# | Authentication | Login and Role-Based Control |
+# 5\. SHA-256 hash is generated as integrity fingerprint  
 
-# | Key Management | Dynamic Key Generation per File |
+# 6\. Manager reviews and approves the file  
+
+# 7\. Authorized client accesses and decrypts the file  
+
+# 8\. Hash is re-verified to ensure no tampering  
 
 # 
 
-\## Project Structure
+# \---
+
+# 
+
+# \## 🛡️ Security Properties
+
+# 
+
+# | Property        | Mechanism                    |
+
+# |---------------- |------------------------------|
+
+# | Confidentiality | AES Encryption               |
+
+# | Integrity       | SHA-256 Hashing              |
+
+# | Authentication  | Login \& Role-Based Control   |
+
+# | Key Management  | Dynamic Key Generation       |
+
+# 
+
+# \---
+
+# 
+
+# \## 🗂️ Project Structure
+
 src/
-===
 
-# &#x20;
+└── com/
 
-# └── com/
+├── client/ → Login, Registration, File Search
 
-# 
+├── manager/ → File Upload, Approval Workflow
 
-# ├── client/       - Login, Registration, File Search
+├── file/ → AES Key Generation, SHA-256 Hashing
 
-# 
+├── database/ → Database Connection
 
-# ├── manager/      - File Upload, Approval Workflow
+└── admin/ → Admin Module
 
-# 
 
-# ├── file/         - AES Key Generation, SHA-256 Hashing
 
-# 
+database/
 
-# ├── database/     - Database Connection
+└── VC12.sql → Database Schema
 
-# 
 
-# └── admin/        - Admin Module
 
-# database/
 
-# 
+\---
 
-└── VC12.sql          - Database Schema
 
-## Technologies Used
-===
 
-# 
+\## 🧰 Technologies Used
 
-# \- \*\*Language:\*\* Java
 
-# \- \*\*Encryption:\*\* AES (Advanced Encryption Standard)
 
-# \- \*\*Integrity:\*\* SHA-256 Cryptographic Hashing
+\- \*\*Language:\*\* Java  
 
-# \- \*\*Database:\*\* MySQL
+\- \*\*Encryption:\*\* AES (Advanced Encryption Standard)  
 
-# \- \*\*IDE:\*\* Eclipse
+\- \*\*Integrity:\*\* SHA-256 Cryptographic Hashing  
 
-# 
+\- \*\*Database:\*\* MySQL  
 
-# \## Future Work
+\- \*\*IDE:\*\* Eclipse  
 
-# 
 
-# \- Integration of Homomorphic Encryption for computation over encrypted data
 
-# \- Blockchain-based tamper-proof key storage
+\---
 
-# \- Cloud deployment with end-to-end encryption
 
-# \- Secure Multi-Party Computation support
 
-# 
+\## 🚀 Future Work
 
-# \## Citation
 
-# 
 
-# If you use this project as a reference, please cite:
+\- Homomorphic Encryption for computation on encrypted data  
+
+\- Blockchain-based tamper-proof key storage  
+
+\- Cloud deployment with end-to-end encryption  
+
+\- Secure Multi-Party Computation (SMPC) support  
+
+
+
+\---
+
+
+
+\## 📚 Citation
+
+
+
+If you use this project, please cite appropriately.
 
